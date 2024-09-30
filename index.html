@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Project</title>
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Section 1 - Fall -->
+    <h2>Autumn</h2>
+    <section class="section fall">
+      <img src="images/fall-1.jpg"
+        alt="fall-1"
+        title="fall-1"
+        class="img"
+        data-id="1"
+      >
+      <img src="images/fall-2.jpg"
+        alt="fall-2"
+        title="fall-2"
+        class="img"
+        data-id="2"
+      >
+      <img src="images/fall-3.jpg"
+        alt="fall-3"
+        title="fall-3"
+        class="img"
+        data-id="3"
+      >
+    </section>
+    <!-- Section 2 - Halloween -->
+    <h2>Halloween</h2>
+    <section class="section halloween">
+      <img src="images/halloween-1.jpg"
+        alt="halloween-1"
+        title="halloween-1"
+        class="img"
+        data-id="1"
+      >
+      <img src="images/halloween-2.jpg"
+        alt="halloween-2"
+        title="halloween-2"
+        class="img"
+        data-id="2"
+      >
+      <img src="images/halloween-3.jpg"
+        alt="halloween-3"
+        title="halloween-3"
+        class="img"
+        data-id="3"
+      >
+      <img src="images/halloween-4.jpg"
+        alt="halloween-4"
+        title="halloween-4"
+        class="img"
+        data-id="4"
+      >
+      <img src="images/halloween-5.jpg"
+        alt="halloween-5"
+        title="halloween-5"
+        class="img"
+        data-id="5"
+      >
+      <img src="images/halloween-6.jpg"
+        alt="halloween-6"
+        title="halloween-6"
+        class="img"
+        data-id="6"
+      >
+    </section>
+
+    <!-- Modal -->
+    <div class="modal">
+      <button class="close-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-content">
+        <button class="prev-btn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next-btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <img src="images/fall-1.jpg" class="main-img" alt="fall-1">
+        <h3 class="image-name">name</h3>
+        <div class="modal-images">
+          <img 
+            src="images/fall-1.jpg"
+            alt="fall-1"
+            title="fall-1"
+            class="modal-img"
+            id="1"
+         >
+          <img 
+            src="images/fall-2.jpg"
+            alt="fall-2"
+            title="fall-2"
+            class="modal-img selected"
+            id="2"
+         >
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

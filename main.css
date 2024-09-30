@@ -1,0 +1,157 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prev-btn {
+    left: -4rem;
+  }
+  .next-btn {
+    right: -4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+body {
+  background-color: #FFF0D1;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.section {
+  padding: 2rem 0 3rem;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 6px;
+  height: 15rem;
+}
+.img:hover {
+  box-shadow: 0 0 4px 1px rgb(79, 79, 79);
+}
+
+.modal {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3B3030;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  min-height: 100vh;
+  /* overflow: scroll; */
+}
+.modal.open {
+  opacity: 1;
+  z-index: 100;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #FFF0D1;
+  background: transparent;
+  border-color: transparent;
+  transition: color 350ms ease-in-out;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: rgb(255, 69, 0, 0.8);
+}
+
+.next-btn,
+.prev-btn {
+  position: absolute;
+  top: 10rem;
+  transform: translateY(-50%);
+  background: transparent;
+  font-size: 2rem;
+  color: #FFF0D1;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: -2.5rem;
+}
+
+.next-btn {
+  right: -2.5rem;
+}
+
+.modal-content {
+  width: 80%;
+  margin-top: 3rem;
+  margin-inline: auto;
+  position: relative;
+  text-align: center;
+}
+
+.main-img {
+  width: 100%;
+  height: 24rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--redius);
+  
+}
+
+.image-name {
+  text-align: center;
+  margin: 1rem 0 2rem;
+  color: #FFF0D1;
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.modal-img {
+  width: 100%;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.modal-img:hover {
+  opacity: 1;
+}
+.modal-img.selected {
+  opacity: 1;
+  outline: 1px solid #FFF0D1;
+}
